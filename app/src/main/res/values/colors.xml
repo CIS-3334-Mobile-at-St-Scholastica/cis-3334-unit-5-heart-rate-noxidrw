@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorMax">#B5E71100</color>
+    <color name="colorHardCore">#BED14519</color>
+    <color name="colorCardio">#9AE6810A</color>
+    <color name="colorWeight">#A4FFE800</color>
+    <color name="colorModerate">#9CC8DD09</color>
+    <color name="colorRest">#D807F125</color>
 </resources>

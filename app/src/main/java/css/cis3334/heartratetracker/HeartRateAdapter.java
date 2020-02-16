@@ -43,8 +43,55 @@ public class HeartRateAdapter extends ArrayAdapter<HeartRate>{
         //get the heart rate we are displaying
         HeartRate hr = hrList.getHeartRate(position);
 
+        TextView labelPulse=(TextView)view.findViewById(R.id.lblPulse);
+        TextView labelRange=(TextView)view.findViewById(R.id.lblRange);
+
         TextView tvPulse=(TextView)view.findViewById(R.id.textViewPulse);
         tvPulse.setText(hr.getPulse().toString());
+
+        TextView tvRange=(TextView)view.findViewById(R.id.textViewRange);
+        tvRange.setText(hr.getRangeName().toString());
+
+        TextView tvSC=(TextView)view.findViewById(R.id.textViewSC);
+        tvSC.setText(hr.getRangeDescrtiption().toString());
+
+        if(hr.getRangeName() == "Resting"){
+            tvPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorRest));
+            tvRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorRest));
+            tvSC.setBackgroundColor(ContextCompat.getColor(context, R.color.colorRest));
+            labelPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorRest));
+            labelRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorRest));
+        }else if(hr.getRangeName() == "Moderate"){
+            tvPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorModerate));
+            tvRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorModerate));
+            tvSC.setBackgroundColor(ContextCompat.getColor(context, R.color.colorModerate));
+            labelPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorModerate));
+            labelRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorModerate));
+        }else if(hr.getRangeName() == "Endurance"){
+            tvPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorWeight));
+            tvRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorWeight));
+            tvSC.setBackgroundColor(ContextCompat.getColor(context, R.color.colorWeight));
+            labelPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorWeight));
+            labelRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorWeight));
+        }else if(hr.getRangeName() == "Aerobic"){
+            tvPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorCardio));
+            tvRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorCardio));
+            tvSC.setBackgroundColor(ContextCompat.getColor(context, R.color.colorCardio));
+            labelPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorCardio));
+            labelRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorCardio));
+        }else if(hr.getRangeName() == "Anaerobic"){
+            tvPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHardCore));
+            tvRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHardCore));
+            tvSC.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHardCore));
+            labelPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHardCore));
+            labelRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorHardCore));
+        }else if(hr.getRangeName() == "Red zone"){
+            tvPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMax));
+            tvRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMax));
+            tvSC.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMax));
+            labelPulse.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMax));
+            labelRange.setBackgroundColor(ContextCompat.getColor(context, R.color.colorMax));
+        }
 
         return(view);
     }
